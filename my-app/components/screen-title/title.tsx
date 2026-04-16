@@ -9,11 +9,11 @@ type ScreenTitleProps = {
 
 const ScreenTitle = ({ title, subTitle }: ScreenTitleProps) => {
   return (
-      <View>
+      <View style={TitleStyles.container}>
          <Text style={TitleStyles.title}>
             {title}
          </Text>
-         <View>
+         <View style={TitleStyles.subTitleContainer}>
             <Text style={TitleStyles.subTitle}>
                {subTitle}
             </Text>

@@ -1,18 +1,31 @@
 import { StyleSheet } from 'react-native';
 
 const  TitleStyles = StyleSheet.create ({
+   container: {
+      alignItems: 'center',
+      justifyContent: 'center'
+   },
+
    title:  {
-      fontFamily: 'SFProDisplayBold',
-      color: '#007C4F',
-      fontSize: 45,
-      letterSpacing: 0.8
+      fontFamily: 'InterBold',
+      color: '#2C2C2C',
+      fontSize: 36,
+      letterSpacing: 0.1,
    },
    
+   subTitleContainer: {
+      marginTop: 20,
+      alignItems: 'center'
+   },
+
    subTitle: {
-      fontFamily: 'SFProDisplaySemibold',
+      textAlign: 'center',
+      lineHeight: 25,
+      fontFamily: 'InterMedium',
       color: '#2C2C2C',
-      fontSize: 25,
-      letterSpacing: 0.8
+      fontSize: 16,
+      letterSpacing: 0.1,
+      opacity: 0.5
    }
 });
 
