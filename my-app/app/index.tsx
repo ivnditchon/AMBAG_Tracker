@@ -7,7 +7,6 @@ import { useRouter } from 'expo-router'
 
 type HomeProps = [
    {
-      imageContainer: StyleProp<ViewStyle>;
       source: ImageSourcePropType;
       imageStyle: StyleProp<ImageStyle>;
       resizeMode: 'cover' | 'contain' | 'repeat' | 'center';
@@ -23,10 +22,9 @@ const Home = () => {
    const router = useRouter(); // Hook for navigation -> login screen
 
    const imgProps: HomeProps[0] = {
-      imageContainer: HomeStyles.imageContainer,
       source: require('../assets/images/Hello-rafiki.png'),
       imageStyle: HomeStyles.imageStyle,
-      resizeMode: 'contain'
+      resizeMode: 'cover'
    };
 
    const footerTextProps: HomeProps[1] = {
@@ -44,14 +42,11 @@ const Home = () => {
       <View 
          style={HomeStyles.container}>
          {/** Logo section */}
-         <View 
-            style={imgProps.imageContainer}>
-            <Image 
-               source={imgProps.source}
-               style={imgProps.imageStyle}
-               resizeMode={imgProps.resizeMode}
-            />
-         </View>
+         <Image 
+            source={imgProps.source}
+            style={imgProps.imageStyle}
+            resizeMode={imgProps.resizeMode}
+         />
          <ScreenTitle 
             title='Welcome AMBaG PMO'
             subTitle='Manage your tasks, track performance with ease and stay organized and keep everything in one place'

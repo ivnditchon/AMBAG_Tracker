@@ -15,7 +15,13 @@ const RootLayout = () => {
    if (!loaded) return null;
 
    return (
-      <SafeAreaView style={{ flex: 1, padding: 35, justifyContent: 'center', backgroundColor: '#FFFFFF' }}>
+      <SafeAreaView style={{ 
+         flex: 1, 
+         paddingVertical: 15, 
+         paddingHorizontal: 35, 
+         justifyContent: 'center', 
+         backgroundColor: '#FFFFFF' 
+      }}>
          <Slot />
       </SafeAreaView>
    );

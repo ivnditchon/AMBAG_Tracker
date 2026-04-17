@@ -7,13 +7,9 @@ const HomeStyles = StyleSheet.create  ({
    },
 
    // Image
-   imageContainer: {
-      marginBottom: 45
-   },
-
    imageStyle:  {
       width: '100%',
-      height: 300
+      height: 400
    },
 
    buttonContainer: {

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, Pressable, View } from 'react-native'
 import React from 'react'
 import ButtonStyles from './button-style'
 
@@ -7,16 +7,22 @@ type ButtonProps = {
    onPress: () => void;
 };
 
-const Button = ({title, onPress}: ButtonProps) => {
+const Button = ({  title, onPress }: ButtonProps) => {
    return (
-      <TouchableOpacity 
-         style={ButtonStyles.button}
+      <Pressable 
+         style={({ pressed }) => [
+            ButtonStyles.button,
+            {
+               transform: [{ scale: pressed ? 0.97 : 1 }],
+               backgroundColor: pressed  ? '#003296' : '#185BE6'
+            }
+         ]}
          onPress={onPress}
          >
-         <Text style={ButtonStyles.title}>
-            {title}
+         <Text style={ ButtonStyles.title }>
+            { title }
          </Text>
-      </TouchableOpacity>
+      </Pressable>
    )
 }
 
